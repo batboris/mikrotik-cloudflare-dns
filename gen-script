@@ -38,7 +38,7 @@ do
     http-method=put \\
     url="https://$HOST/client/v4/zones/$ZONE_ID/dns_records/$id" \\
     http-header-field="content-type: application/json,Authorization: Bearer $TOKEN" \\
-    http-data="{\"type\":\"A\",\"name\":\"$name\",\"content\":\"\$mcdCurrentIP\"}" \\
+    http-data="{\"type\":\"A\",\"name\":\"$name\",\"content\":\"\$mcdCurrentIP\",\"ttl\":1}" \\
     output=none
 EOT
 done
